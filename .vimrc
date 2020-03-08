@@ -5,17 +5,23 @@ set softtabstop=4
 set shiftwidth=4
 set mouse=a
 set encoding=utf-8
+set scrolloff=5
 
 set autoindent
 set number
 set hlsearch
 set relativenumber
 
+"system
+set clipboard=unnamedplus
+
 let mapleader=" "
 map <leader>h <C-w>h
 map <leader>l <C-w>l
 map <leader>j <C-w>j
 map <leader>k <C-w>k
+
+map <leader><leader> /<++><CR>:nohlsearch<CR>c4l
 
 map sh :vsplit<CR>
 map sl :vsplit<CR><C-w>l
@@ -37,11 +43,14 @@ inoremap <C-j> <Down>
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 Plug 'preservim/nerdtree'
 
 Plug 'majutsushi/tagbar'
+
+Plug 'junegunn/vim-peekaboo'
+
 call plug#end()
 
 
