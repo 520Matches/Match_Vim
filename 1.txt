@@ -1,0 +1,5 @@
+yank
+debug
+jmp function
+function shrink
+automatic alignment
