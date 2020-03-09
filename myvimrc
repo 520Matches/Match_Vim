@@ -10,7 +10,7 @@ set scrolloff=5
 set autoindent
 set number
 set hlsearch
-set relativenumber
+"set relativenumber
 
 "system
 set clipboard=unnamedplus
@@ -48,14 +48,3 @@ call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
 
 Plug 'majutsushi/tagbar'
-
-Plug 'junegunn/vim-peekaboo'
-
-call plug#end()
-
-
-"nerdtree
-map <C-n> :NERDTreeToggle<CR>
-
-"tagbar
-nmap <F8> :TagbarToggle<CR><C-w>l
