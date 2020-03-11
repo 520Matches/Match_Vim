@@ -61,6 +61,8 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'tpope/vim-fugitive'
 
+Plug 'ycm-core/YouCompleteMe'
+
 call plug#end()
 
 "cscope================================================
