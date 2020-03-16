@@ -34,6 +34,7 @@ map <down> :res -5<CR>
 map <left> :vertical resize-5<CR>
 map <right> :vertical resize+5<CR>
 
+
 inoremap <C-l> <Right>
 inoremap <C-h> <Left>
 inoremap <C-k> <Up>
@@ -62,6 +63,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
 Plug 'ycm-core/YouCompleteMe'
+
+Plug 'junegunn/fzf',{'do':'./install --bin'}
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
