@@ -44,7 +44,7 @@ inoremap <C-j> <Down>
 
 call plug#begin('~/.vim/plugged')
 
-"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } , 'for' : ['markdown' , 'vim-plug'] }
 
 Plug 'preservim/nerdtree'
 
@@ -58,11 +58,11 @@ Plug 'preservim/nerdcommenter'
 
 Plug 'godlygeek/tabular'
 
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
 
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 
-Plug 'ycm-core/YouCompleteMe'
+"Plug 'ycm-core/YouCompleteMe' , { 'do' : './install.py' }
 
 Plug 'junegunn/fzf',{'do':'./install --bin'}
 Plug 'junegunn/fzf.vim'
@@ -85,27 +85,9 @@ map <C-n> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR><C-w>l
 
 "nerdcommenter
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
+source ~/.vim/config/nerdcommenter.conf
 
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
+"markdown-preview========================================
+source ~/.vim/config/markdown-preview.conf 
 
-" Align line-wise comment delimiters flush left instead of following code indentation
-"let g:NERDDefaultAlign = 'left'
-
-" Set a language to use its alternate delimiters by default
-let g:NERDAltDelims_java = 1
-
-" Add your own custom formats or override the defaults
-"let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
-let g:NERDCustomDelimiters = { 'c': { 'left': '//' } }
-
-" Allow commenting and inverting empty lines (useful when commenting a region)
-let g:NERDCommentEmptyLines = 1
-
-" Enable trimming of trailing whitespace when uncommenting
-let g:NERDTrimTrailingWhitespace = 1
-
-" Enable NERDCommenterToggle to check all selected lines is commented or not 
-let g:NERDToggleCheckAllLines = 2
+nmap <leader>r :w<CR>:MarkdownPreview<CR>
