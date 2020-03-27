@@ -9,7 +9,7 @@ set scrolloff=5
 
 set autoindent
 set number
-set hlsearch
+set nohlsearch
 "set relativenumber
 
 "system
