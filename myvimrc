@@ -16,6 +16,11 @@ set nohlsearch
 set clipboard=unnamedplus
 set wildmenu
 
+"environmental
+set sessionoptions="blank,buffers,globals,localoptions,tabpages,sesdir,folds,help,options,resize,winpos,winsize"
+set undodir=~/.vim/.vim_undo_history/
+set undofile
+
 let mapleader=" "
 map <leader>h <C-w>h
 map <leader>l <C-w>l
@@ -44,7 +49,8 @@ inoremap <C-j> <Down>
 vnoremap <leader>y "+y
 nmap <leader>p "+p
 
-
+map <leader>ss :mksession! my.vim<cr> :wviminfo! my.viminfo<cr>
+map <leader>rs :source my.vim<cr> :rviminfo my.viminfo<cr>
 
 call plug#begin('~/.vim/plugged')
 
@@ -66,7 +72,7 @@ Plug 'godlygeek/tabular'
 
 "Plug 'tpope/vim-fugitive'
 
-"Plug 'ycm-core/YouCompleteMe' , { 'do' : './install.py' }
+Plug 'ycm-core/YouCompleteMe' , { 'do' : './install.py' }
 
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
