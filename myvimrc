@@ -14,6 +14,7 @@ set nohlsearch
 
 "system
 set clipboard=unnamedplus
+set wildmenu
 
 let mapleader=" "
 map <leader>h <C-w>h
@@ -21,7 +22,7 @@ map <leader>l <C-w>l
 map <leader>j <C-w>j
 map <leader>k <C-w>k
 
-map <leader><leader> /<++><CR>:nohlsearch<CR>c4l
+"map <leader><leader> /<++><CR>:nohlsearch<CR>c4l
 
 map sh :vsplit<CR>
 map sl :vsplit<CR><C-w>l
@@ -39,6 +40,9 @@ inoremap <C-l> <Right>
 inoremap <C-h> <Left>
 inoremap <C-k> <Up>
 inoremap <C-j> <Down>
+
+vnoremap <leader>y "+y
+nmap <leader>p "+p
 
 
 
@@ -64,8 +68,14 @@ Plug 'godlygeek/tabular'
 
 "Plug 'ycm-core/YouCompleteMe' , { 'do' : './install.py' }
 
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 Plug 'junegunn/fzf',{'do':'./install --bin'}
 Plug 'junegunn/fzf.vim'
+
+Plug 'vim-scripts/DfrankUtil'
+Plug 'vim-scripts/vimprj'
+Plug 'vim-scripts/indexer.tar.gz'
 
 call plug#end()
 
@@ -91,3 +101,11 @@ source ~/.vim/config/nerdcommenter.conf
 source ~/.vim/config/markdown-preview.conf 
 
 nmap <leader>r :w<CR>:MarkdownPreview<CR>
+
+"coc====================================================
+source ~/.vim/config/coc.conf
+
+
+"vim-scripts============================================
+"indexer
+let g:indexer_ctagsCommandLineOptions="--c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v --fields=+iaSl --extra=+q"
