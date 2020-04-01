@@ -49,11 +49,11 @@ inoremap <C-j> <Down>
 vnoremap <leader>y "+y
 nmap <leader>p "+p
 
-map <leader>ss :mksession! my.vim<cr> :wviminfo! my.viminfo<cr>
-map <leader>rs :source my.vim<cr> :rviminfo my.viminfo<cr>
+map <leader>ss :mksession! ~/.vim/my.vim<cr> :wviminfo! ~/.vim/my.viminfo<cr>
+map <leader>rs :source ~/.vim/my.vim<cr> :rviminfo ~/.vim/my.viminfo<cr>
 
-map <M-b> <Plug>(wildfire-fuel)
-vmap <M-B> <Plug>(wildfire-water)
+map <F2> <Plug>(wildfire-fuel)
+vmap <F3> <Plug>(wildfire-water)
 let g:wildfire_objects=["i'", 'i"', "i)", "i]", "i}", "i>", "ip"]
 
 call plug#begin('~/.vim/plugged')
