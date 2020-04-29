@@ -5,6 +5,12 @@ set softtabstop=4
 set shiftwidth=4
 set mouse=a
 set encoding=utf-8
+
+" set langmenu=zh_CN.UTF-8
+" language message zh_CN.UTF-8
+" set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+" set termencoding=utf-8
+
 set scrolloff=5
 
 set autoindent
@@ -60,6 +66,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } , 'for' : ['markdown' , 'vim-plug'] }
 
+Plug 'dhruvasagar/vim-table-mode'
+
 Plug 'preservim/nerdtree'
 
 Plug 'majutsushi/tagbar'
@@ -98,6 +106,7 @@ call plug#end()
 map <leader>= :Tabularize /=<CR>
 map <leader>, :Tabularize /,<CR>
 map <leader>; :Tabularize /;<CR>
+map <leader><Space> :Tabularize /<Space><CR>
 
 
 "nerdtree===============================================
@@ -111,6 +120,9 @@ source ~/.vim/config/nerdcommenter.conf
 
 "markdown-preview========================================
 source ~/.vim/config/markdown-preview.conf 
+
+"vim-table-mode
+source ~/.vim/config/vim-table-mode.conf
 
 nmap <leader>r :w<CR>:MarkdownPreview<CR>
 
