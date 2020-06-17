@@ -145,3 +145,6 @@ nnoremap <silent> <Leader>b :Buffers<CR>
   " \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
   " \                 <bang>0)
 nnoremap <silent> <Leader>a :Ag<CR>
+
+" lazygit===============================================
+nnoremap <silent> <Leader>zg :! lazygit<CR>
