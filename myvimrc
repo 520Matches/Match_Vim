@@ -76,17 +76,19 @@ Plug 'junegunn/vim-peekaboo'
 
 Plug 'preservim/nerdcommenter'
 
-"Plug 'SpaceVim/cscope.vim'
+" Plug 'SpaceVim/cscope.vim'
 
 Plug 'godlygeek/tabular'
 
-"Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
-"Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 
 " Plug 'ycm-core/YouCompleteMe' , { 'do' : './install.py' }
 
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Plug 'kdheepak/lazygit.vim'
 
 Plug 'junegunn/fzf',{'do':'./install --bin'}
 Plug 'junegunn/fzf.vim'
@@ -96,6 +98,8 @@ Plug 'vim-scripts/vimprj'
 Plug 'vim-scripts/indexer.tar.gz'
 
 Plug 'gcmt/wildfire.vim'
+
+Plug 'vim-scripts/VisIncr'
 
 call plug#end()
 
@@ -146,5 +150,8 @@ nnoremap <silent> <Leader>b :Buffers<CR>
   " \                 <bang>0)
 nnoremap <silent> <Leader>a :Ag<CR>
 
-" lazygit===============================================
+" lazygit==============================================
 nnoremap <silent> <Leader>zg :! lazygit<CR>
+
+" vim-scripts/VisIncr==================================
+source ~/.vim/config/visincr.conf
