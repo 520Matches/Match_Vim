@@ -101,6 +101,10 @@ Plug 'gcmt/wildfire.vim'
 
 Plug 'vim-scripts/VisIncr'
 
+Plug 'vim-scripts/utl.vim'
+
+Plug 'ianva/vim-youdao-translater'
+
 call plug#end()
 
 "cscope================================================
@@ -155,3 +159,8 @@ nnoremap <silent> <Leader>zg :! lazygit<CR>
 
 " vim-scripts/VisIncr==================================
 source ~/.vim/config/visincr.conf
+
+" vim-youdao-translater================================
+vnoremap <silent> <C-t> :<C-u>Ydv<CR>
+nnoremap <silent> <C-t> :<C-u>Ydc<CR>
+noremap <Leader>yd :<C-u>Yde<CR>
