@@ -101,7 +101,9 @@ Plug 'gcmt/wildfire.vim'
 
 Plug 'vim-scripts/VisIncr'
 
-Plug 'vim-scripts/utl.vim'
+" Plug 'dhruvasagar/vim-open-url'
+
+Plug '520Matches/vim-open-url'
 
 Plug 'ianva/vim-youdao-translater'
 
