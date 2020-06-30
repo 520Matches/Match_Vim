@@ -33,6 +33,8 @@ map <leader>l <C-w>l
 map <leader>j <C-w>j
 map <leader>k <C-w>k
 
+map <F5> :source ~/.vimrc<CR>
+
 "map <leader><leader> /<++><CR>:nohlsearch<CR>c4l
 
 map sh :vsplit<CR>
