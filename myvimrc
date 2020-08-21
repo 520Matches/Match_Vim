@@ -112,6 +112,9 @@ Plug '520Matches/vim-open-url'
 
 Plug 'ianva/vim-youdao-translater'
 
+" float terminal
+Plug 'voldikss/vim-floaterm'
+
 call plug#end()
 
 "cscope================================================
@@ -171,3 +174,6 @@ source ~/.vim/config/visincr.conf
 vnoremap <silent> <C-T> :<C-u>Ydv<CR>
 nnoremap <silent> <C-T> :<C-u>Ydc<CR>
 noremap <Leader>yd :<C-u>Yde<CR>
+
+" float terminal
+source ~/.vim/config/floaterm.conf
